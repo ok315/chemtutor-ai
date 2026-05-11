@@ -1,0 +1,17 @@
+# Secrets
+.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Data files (we don't want to commit large PDFs or generated embeddings)
+data/
+
+# OS files
+.DS_Store
+Thumbs.db
