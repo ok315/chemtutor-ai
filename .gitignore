@@ -9,9 +9,11 @@ __pycache__/
 # VS Code
 .vscode/
 
-# Data: keep KB files for Spaces (Retriever); exclude heavy/ephemeral artifacts
+# Data: keep chunks.json in Git for Spaces; embeddings.npy is blocked by HF Space Git —
+# ship it via an HF Dataset (see CHEMTUTOR_KB_DATASET) or build locally.
 data/chemistry_book.pdf
 data/audio/
+data/kb/embeddings.npy
 
 # OS files
 .DS_Store

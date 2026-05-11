@@ -12,6 +12,7 @@ from typing import List, Dict
 import numpy as np
 
 from src.knowledge_base.embedder import embed_texts
+from src.knowledge_base.kb_fetch import ensure_embeddings_file
 
 
 # Default paths come from the central config
@@ -54,10 +55,11 @@ class Retriever:
                 f"Chunks file not found: {chunks_path}\n"
                 f"Run scripts/build_knowledge_base.py first."
             )
+        ensure_embeddings_file(embeddings_path)
         if not embeddings_path.exists():
             raise FileNotFoundError(
                 f"Embeddings file not found: {embeddings_path}\n"
-                f"Run scripts/build_knowledge_base.py first."
+                f"Place embeddings.npy in data/kb/ or configure CHEMTUTOR_KB_DATASET."
             )
 
         # Load chunks (a list of dicts with text + metadata)
