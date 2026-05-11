@@ -9,8 +9,9 @@ __pycache__/
 # VS Code
 .vscode/
 
-# Data files (we don't want to commit large PDFs or generated embeddings)
-data/
+# Data: keep KB files for Spaces (Retriever); exclude heavy/ephemeral artifacts
+data/chemistry_book.pdf
+data/audio/
 
 # OS files
 .DS_Store
